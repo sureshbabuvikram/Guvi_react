@@ -27,7 +27,8 @@ function Profile() {
         setErrors(err);
         if(err.age ==='' && err.gender ==='' && err.dob ==='' && err.mobile === '' && err.address === ''){
             // setValues({email:userMail})
-            await axios.post('http://localhost:4000/api/user/updateuser',values)
+            // await axios.post('http://localhost:4000/api/user/updateuser',values)
+            await axios.post('https://vercel.com/sureshbabuvikram/guvi-nodejs-backend/api/user/updateuser',values)
             .then(res=>{
                 let message=res.data.message;
                 if(res.data.message === "User updated successfully"){                    
