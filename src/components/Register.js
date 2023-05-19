@@ -20,7 +20,7 @@ function Register() {
         setErrors(err);
         if (err.name === '' && err.email === '' && err.password === '') {
             // await axios.post('http://localhost:4000/api/user/register', values)
-            await axios.post('https://vercel.com/sureshbabuvikram/guvi-nodejs-backend/api/user/register', values)
+            await axios.post('https://guvi-nodejs-backend.vercel.app/api/user/register', values)
                 .then(res => {
                     let message = res.data.message;
                     if (res.data.message === 'User registered successfully') {
